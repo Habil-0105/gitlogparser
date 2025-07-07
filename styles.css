@@ -44,6 +44,23 @@ body {
     padding: 40px;
 }
 
+.instruction-title {
+    font-size: 1.3rem;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.command-block {
+    background: #f0f4c3;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #cddc39;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
 .input-section {
     margin-bottom: 40px;
 }
@@ -242,15 +259,15 @@ body {
 
 @media (max-width: 768px) {
     .header h1 {
-font-size: 2rem;
+        font-size: 2rem;
     }
     
     .main-content {
-padding: 20px;
+        padding: 20px;
     }
     
     .results-header {
-flex-direction: column;
-gap: 15px;
+        flex-direction: column;
+        gap: 15px;
     }
 }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Log Parser</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -14,22 +16,31 @@
         </div>
 
         <div class="main-content">
+            <div class="file-info">
+                <h3 class="instruction-title">📄 How to Generate Your Git Log File</h3>
+                <p>
+                    To export your Git commits, run the following command inside your repository:
+                </p>
+                <pre class="command-block">git log --author="Your Name" --pretty=format:"%ad | %s" --date=format:"%Y-%m-%d %H:%M:%S" > git_push_activity.txt</pre>
+                <p>
+                    This will save your commit history (by <code>Your Name</code>) into <code>git_push_activity.txt</code>.
+                    Open it, copy the contents, and paste them into the input box below to generate your report.
+                </p>
+            </div>
+
             <div class="input-section">
                 <div class="input-content" id="textInputContent">
                     <div class="text-input-area">
                         <label for="gitLogInput" class="input-label">Paste your Git Log here:</label>
-                        <textarea 
-                            id="gitLogInput" 
-                            class="git-log-textarea" 
+                        <textarea id="gitLogInput" class="git-log-textarea"
                             placeholder="Paste your git log data here...&#10;&#10;Format: YYYY-MM-DD HH:MM:SS | commit message&#10;Example:&#10;2024-01-15 10:30:45 | Initial commit&#10;2024-01-15 14:20:12 | Add user authentication&#10;2024-01-16 09:15:30 | Fix login bug"
-                            rows="10"
-                        ></textarea>
+                            rows="10"></textarea>
                         <div class="input-hint">
                             <span>💡 Expected format: <code>YYYY-MM-DD HH:MM:SS | commit message</code></span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div style="text-align: center; margin-top: 20px;">
                     <button class="btn" id="processBtn">Process Git Log</button>
                 </div>
@@ -52,4 +63,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
